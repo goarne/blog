@@ -3,9 +3,10 @@ package handler
 import (
 	"html/template"
 	"net/http"
-	"nilsen.no/blog/article"
 	"strings"
 	"time"
+
+	"github.com/goarne/blog/article"
 )
 
 //The HtmlHandler handles http requests from browser.

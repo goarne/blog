@@ -1,8 +1,9 @@
 package handler
 
 import (
-	"github.com/goarne/web"
 	"net/http"
+
+	"github.com/goarne/web"
 )
 
 type FileHandler struct {
@@ -14,7 +15,7 @@ func NewFileHandler(p string) *FileHandler {
 }
 
 func (f *FileHandler) ServeReq(c *web.ChainedReq) {
-
+	//http.ServeFile()
 	f.ServeHTTP(c.Resp, c.Req)
 	c.State = web.STOPPED
 }

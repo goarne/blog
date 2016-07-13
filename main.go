@@ -3,12 +3,13 @@ package main
 
 import (
 	//"github.com/davecheney/profile"
-	"github.com/nilsengo/web"
-	"gopkg.in/mgo.v2"
 	"net/http"
 	_ "net/http/pprof"
-	"nilsen.no/blog/config"
-	"nilsen.no/blog/handler"
+
+	"github.com/goarne/blog/config"
+	"github.com/goarne/blog/handler"
+	"github.com/goarne/web"
+	"gopkg.in/mgo.v2"
 )
 
 //The application is simple blog webapplication with html and a REST interface.
@@ -90,7 +91,7 @@ func createChainedHtmlRoute() *web.Route {
 func createJsonRoute() *web.Route {
 	r := web.NewRoute()
 	r.Path("/blog/article/{id}")
-	r.Method("POST").Method("GET").Method("PUT").Method("DELETE").Method("OPTIONS")
+	r.Method("POST").Method(web.HttpPost).Method("PUT").Method("DELETE").Method("OPTIONS")
 	r.Header("Accept", "json")
 
 	r.Handler(handler.NewRestHandler())

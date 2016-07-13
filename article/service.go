@@ -2,9 +2,9 @@
 package article
 
 import (
+	"github.com/goarne/blog/config"
 	"gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
-	"nilsen.no/blog/config"
 )
 
 //The stateless servicefacade for CRUD services on articles.

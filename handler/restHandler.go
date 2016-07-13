@@ -3,7 +3,8 @@ package handler
 import (
 	"encoding/json"
 	"net/http"
-	"nilsen.no/blog/article"
+
+	"github.com/goarne/blog/article"
 )
 
 //The controller handles CRUD requests wiht JSON responses.

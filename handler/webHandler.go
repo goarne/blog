@@ -2,8 +2,9 @@ package handler
 
 import (
 	"net/http"
-	"nilsen.no/blog/article"
 	"strconv"
+
+	"github.com/goarne/blog/article"
 )
 
 //Base controller for handling webrequests.

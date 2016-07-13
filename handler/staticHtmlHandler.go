@@ -4,7 +4,7 @@ import (
 	"github.com/goarne/web"
 	"html/template"
 	"net/http"
-	"nilsen.no/blog/config"
+	"github.com/goarne/blog/config"
 	"strings"
 )
 
